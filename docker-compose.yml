@@ -1,20 +1,20 @@
 version: '3.8'
 
 services:
-  # Contenedor 1: Expuesto al host (tu PC)
+
   api-gateway:
     build: ./gateway
     ports:
-      - "8080:3000"   # Puerto 8080 de tu PC -> 3000 del contenedor
+      - "8080:3000"   
     depends_on:
       - servicio-interno
     networks:
       - red-proyecto
 
-  # Contenedor 2: Solo visible dentro de la red de Docker
+
   servicio-interno:
     build: ./servicio
-    # No mapeamos puertos al host, es privado
+
     networks:
       - red-proyecto
 

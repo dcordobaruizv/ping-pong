@@ -3,7 +3,6 @@ const axios = require('axios');
 const app = express();
 const PORT = 3000;
 
-// 'servicio-interno' es el nombre del servicio en docker-compose.yml
 const URL_SERVICIO = 'http://servicio-interno:3000/ping';
 
 app.get('/', async (req, res) => {

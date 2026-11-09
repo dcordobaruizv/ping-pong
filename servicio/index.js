@@ -5,7 +5,7 @@ const PORT = 3000;
 app.get('/ping', (req, res) => {
   res.json({
     status: 'ok',
-    from: 'servicio-interno',
+    from: 'servicio interno',
     mensaje: '¡Pong!'
   });
 });
